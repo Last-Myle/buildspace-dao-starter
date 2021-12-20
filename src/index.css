@@ -4,7 +4,7 @@ body {
   font-family: Inter, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #7700ee;
+  background-color: #964b00;
   color: #fff;
   overflow-x: hidden;
 }
@@ -16,6 +16,10 @@ body {
 h1 {
   font-size: 5rem;
 }
+.subtitle {
+  font-size: 2rem;
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 3rem;
