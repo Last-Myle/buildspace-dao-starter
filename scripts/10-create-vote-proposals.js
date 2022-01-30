@@ -16,7 +16,7 @@ const tokenModule = sdk.getTokenModule(
     const amount = 420_000;
     // Create proposal to mint 420,000 new token to the treasury.
     await voteModule.propose(
-      "Should VAODAO mint " + amount + " tokens into the treasury?",
+      "Should VADAO mint " + amount + " tokens into the treasury?",
       [
         {
           // Our nativeToken is ETH. nativeTokenValue is the amount of ETH we want
@@ -48,7 +48,7 @@ const tokenModule = sdk.getTokenModule(
     const amount = 6_900;
     // Create proposal to transfer ourselves 6,900 token for being awesome.
     await voteModule.propose(
-      "Should VAODAO transfer " +
+      "Should VADAO transfer " +
       amount + " tokens from the treasury to " +
       process.env.WALLET_ADDRESS + " for being awesome?",
       [

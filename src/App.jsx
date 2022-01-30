@@ -241,7 +241,7 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>VAODAO Private Console</h1>
+        <h1>VADAO Private Console</h1>
         <div>
           <div>
             <h2>Member List</h2>
