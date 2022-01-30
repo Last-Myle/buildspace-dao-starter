@@ -21,7 +21,7 @@ const tokenModule = sdk.getTokenModule(
     console.log(
       "✅ There now is",
       ethers.utils.formatUnits(totalSupply, 18),
-      "$FNSD in circulation",
+      "$VADAO in circulation",
     );
   } catch (error) {
     console.error("Failed to print money", error);

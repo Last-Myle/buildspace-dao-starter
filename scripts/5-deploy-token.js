@@ -8,9 +8,9 @@ const app = sdk.getAppModule("0x2EA3DD8799d2Ec817fD6898BA657DDE1Cb115fA8");
     // Deploy a standard ERC-20 contract.
     const tokenModule = await app.deployTokenModule({
       // What's your token's name? Ex. "Ethereum"
-      name: "FNSDAO Governance Token",
+      name: "VADAO Governance Token",
       // What's your token's symbol? Ex. "ETH"
-      symbol: "FNSD",
+      symbol: "VADAO",
     });
     console.log(
       "✅ Successfully deployed token module, address:",

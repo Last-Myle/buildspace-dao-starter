@@ -9,7 +9,7 @@ const appModule = sdk.getAppModule(
   try {
     const voteModule = await appModule.deployVoteModule({
       // Give your governance contract a name.
-      name: "FNSDAO's Genesis Proposals",
+      name: "VADAO's Genesis Proposals",
 
       // This is the location of our governance token, our ERC-20 contract!
       votingTokenAddress: "0x2b8FDfb353899B7a6da9307CB98f0227894C7EEe",

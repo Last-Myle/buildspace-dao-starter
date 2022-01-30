@@ -8,7 +8,7 @@ const app = sdk.getAppModule("0x2EA3DD8799d2Ec817fD6898BA657DDE1Cb115fA8");
   try {
     const bundleDropModule = await app.deployBundleDropModule({
       // The collection's name, ex. CryptoPunks
-      name: "FNSDAO Membership",
+      name: "VADAO Membership",
       // A description for the collection.
       description: "Experimental DAO; FM, NP, SB as genesis members.",
       // The image for the collection that will show up on OpenSea.

@@ -244,15 +244,17 @@ const App = () => {
         <div
           className="member-page-header"
           style={{
-            display: "flow"
+            display: "flow",
+            marginLeft: "1em"
           }}
         >
-          <h1>VADAO Private Console</h1>
+          <h1>Governance Console</h1>
         </div>
         <div
           className="wrapper"
           style={{
-            display: "grid"
+            display: "grid",
+            marginLeft: "1em"
           }} 
         >
           <div>
@@ -434,12 +436,16 @@ const App = () => {
   // Render mint nft screen.
   return (
     <div className="mint-nft">
-      <h1>Mint your free FNSDAO Membership NFT</h1>
+      <h1>Mint your free VADAO Membership NFT</h1>
       <button
         disabled={isClaiming}
         onClick={() => mintNft()}
+        className="btn-submit-mint"
+          style={{
+            borderRadius: "0",
+          }}
       >
-        {isClaiming ? "Minting..." : "Mint your nft (FREE)"}
+        {isClaiming ? "Minting..." : "Mint your NFT (FREE)"}
       </button>
     </div>
   );

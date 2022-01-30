@@ -396,12 +396,12 @@ const Dashboard = () => {
   // Render mint nft screen.
   return (
     <div className="mint-nft">
-      <h1>Mint your free FNSDAO Membership NFT</h1>
+      <h1>Mint your free VADAO Membership NFT</h1>
       <button
         disabled={isClaiming}
         onClick={() => mintNft()}
       >
-        {isClaiming ? "Minting..." : "Mint your nft (FREE)"}
+        {isClaiming ? "Minting..." : "Mint your NFT (FREE)"}
       </button>
     </div>
   );

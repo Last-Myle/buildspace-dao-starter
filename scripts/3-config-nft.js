@@ -10,7 +10,7 @@ const bundleDrop = sdk.getBundleDropModule(
     await bundleDrop.createBatch([
       {
         name: "Membership NFT",
-        description: "Show this NFT to get into FNSDAO!",
+        description: "Show this NFT to get into VADAO!",
         image: readFileSync("scripts/assets/FNS-DAO_Membership.png"),
       },
     ]);
