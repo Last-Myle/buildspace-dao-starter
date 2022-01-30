@@ -67,7 +67,7 @@ h1 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   margin: auto;
-  align-content: center;
+  align-content: left;
   display: flex;
   text-align: center;
 }

@@ -241,8 +241,20 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>VADAO Private Console</h1>
-        <div>
+        <div
+          className="member-page-header"
+          style={{
+            display: "flow"
+          }}
+        >
+          <h1>VADAO Private Console</h1>
+        </div>
+        <div
+          className="wrapper"
+          style={{
+            display: "grid"
+          }} 
+        >
           <div>
             <h2>Member List</h2>
             <table className="card">
