@@ -1,7 +1,6 @@
 import { ethers } from "ethers";
 import { ThirdwebSDK } from "@3rdweb/sdk";
 import { useEffect, useMemo, useState } from "react";
-import landingBackground from "./images/landing-page-background.png";
 
 // import thirdweb
 import { useWeb3 } from "@3rdweb/hooks";
@@ -14,7 +13,7 @@ const bundleDropModule = sdk.getBundleDropModule(
   "0x6a89DCE2119F35Cf434ed7e882a299175152E745",
 );
 
-const App = () => {
+const Dashboard = () => {
   // Use the connectWallet hook thirdweb gives us.
   const { connectWallet, address, error, provider } = useWeb3();
   console.log("👋 Address:", address)
@@ -192,46 +191,26 @@ const App = () => {
   // to your web app. Let them call connectWallet.
   if (!address) {
     return (
-      <div 
-        className="bg_image"
-        style={{ 
-            backgroundImage: `url(${landingBackground})`,
-            backgroundSize: "cover",
-            height: "100vh",
-            color: "gray",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center" 
-        }}        
-      >
-        <div
-          className="wrapper"
-          style={{
-            display: "grid"
-          }}
-        >
-          <h2
-              className="landing_header_text"
-              style={{
-                  fontFamily: "sans-serif",
-                  color: "black",
-                  padding: "1rem",
-                  backgroundColor: "white"
-              }}
-          >
-              The future of DAO ecosystems.
-          </h2>
-          <div>
-            <button onClick={() => connectWallet("injected")} 
-              className="btn-wallet-connect"
-              style={{
-                borderRadius: "0",
-              }}
-            >
-              Connect wallet
-            </button>
-          </div> 
-        </div>       
+      <div className="w-full p-4">
+          <main role="main" className="w-full flex flex-col h-screen content-center justify-center">
+              <div className="w-full sm:w-1/2 lg:w-1/3 bg-gray-50 rounded-xl m-auto">
+                  <div className="bg-white rounded shadow px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                      <div className="sm:flex sm:items-start">
+                          <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                              <h2 className="text-lg leading-6 font-large text-gray-900" id="modal-title">FNS DAO</h2>
+                              <div className="mt-2">
+                                  <p className="text-3xl font-bold underline">
+                                      An experiment with micro membership and governance. Mint an NFT to join.
+                                  </p>
+                                  <button onClick={() => connectWallet("injected")} className="btn-hero">
+                                      Connect your wallet
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </main>
       </div>
     );
   }
@@ -241,9 +220,9 @@ const App = () => {
   if (hasClaimedNFT) {
     return (
       <div className="member-page">
-        <h1>VAODAO Private Console</h1>
+        <h1 className="text-lg leading-6 font-large text-gray-900">FNSDAO Member Console</h1>
         <div>
-          <div>
+          <div className="border-solid border-2 border-light-blue-500">
             <h2>Member List</h2>
             <table className="card">
               <thead>
@@ -375,12 +354,7 @@ const App = () => {
                   </div>
                 </div>
               ))}
-              <button disabled={isVoting || hasVoted} type="submit"
-                className="btn-submit-vote"
-                style={{
-                  borderRadius: "0",
-                }}
-              >
+              <button disabled={isVoting || hasVoted} type="submit">
                 {isVoting
                   ? "Voting..."
                   : hasVoted
@@ -434,4 +408,4 @@ const App = () => {
 
 };
 
-export default App;
+export default Dashboard;
